@@ -66,6 +66,24 @@
       </li>
       @endif
 
+      @if ($admin->can('employee.create') || $admin->can('employee.view') ||  $admin->can('employee.edit') ||  $admin->can('employee.delete'))
+      <li class="nav-item">
+        <a href="{{route('employee.index')}}" class="nav-link">
+          <i class="nav-icon fas fa-file"></i>
+          <p>Employee</p>
+        </a>
+      </li>
+      @endif
+
+      @if ($admin->can('accounting.create') || $admin->can('accounting.view') ||  $admin->can('accounting.edit') ||  $admin->can('accounting.delete'))
+      <li class="nav-item">
+       {{--  <a href="{{route('income.index')}}" class="nav-link">
+          <i class="nav-icon fas fa-file"></i>
+          <p>Income</p>
+        </a> --}}
+      </li>
+      @endif
+
       <li class="nav-item">
         <a class="nav-link" href="{{ route('logout') }}"
         onclick="event.preventDefault();

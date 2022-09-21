@@ -84,11 +84,22 @@ class RolePermissionSeeder extends Seeder
             [
                 'group_name' => 'accounting',
                 'permissions' => [
-                    // subscriber Permissions
+                    // accounting Permissions
                     'accounting.view',
                     'accounting.create',
                     'accounting.edit',
                     'accounting.delete',
+                ],
+            ],
+
+            [
+                'group_name' => 'employee',
+                'permissions' => [
+                    // employee Permissions
+                    'employee.view',
+                    'employee.create',
+                    'employee.edit',
+                    'employee.delete',
                 ],
             ],
             

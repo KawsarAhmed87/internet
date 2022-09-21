@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\RolesController;
 use App\Http\Controllers\Backend\UsersController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\ConnectionController;
 use App\Http\Controllers\Backend\SubscriberController;
@@ -34,4 +35,5 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('product', ProductController::class);
     Route::resource('connection', ConnectionController::class);
     Route::resource('item-account', ItemAccountController::class);
+    Route::resource('employee', EmployeeController::class);
 });
